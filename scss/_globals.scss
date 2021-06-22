@@ -1,0 +1,94 @@
+@import 'functions';
+@import 'breakpoints';
+@import 'reset';
+
+::selection {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+}
+
+body {
+    background-color: $secondaryColor;
+}
+
+.contents {
+    max-width: $maxWidth;
+    margin: auto;
+    padding: $paddingDef;
+
+    @include media('<tablet') {
+        padding: $paddingDef $paddingMob;
+    }
+}
+
+h1, h3, a.button {
+    font-family: $headerFont;
+    text-transform: uppercase;
+}
+
+h1 {    
+    font-size: 4.063rem;
+    line-height: 5.188rem;
+    font-weight: 500;
+    color: $primaryColor;
+
+    margin: 0;
+
+    @include media('<tablet') {
+        font-size: 1.938rem;
+        line-height: 2.438rem;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.875rem;
+    font-weight: 500;
+    color: white;
+
+    margin: 0;
+
+    @include media('<tablet') {
+        font-size: 1.375rem;
+    }
+}
+
+p {
+    font-size: 1rem;
+    font-family: $bodyFont;
+    font-weight: 300;
+    line-height: 1.2;
+    color: white;
+
+    &.bigger {
+        font-size: 1.25rem;
+
+        @include media('<tablet') {
+            font-size: 1rem;
+        }
+    }
+}
+
+a.button {
+    display: block;
+    
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $secondaryColor;
+    background-color: $primaryColor;
+    text-decoration: none;
+    text-align: center;
+
+    padding: 20px 30px;
+
+    transition: all 0.15s ease-in-out;
+
+    @include media('<tablet') {
+        font-size: 1.25rem;
+    }
+
+    &:hover {
+        background-color: $secondaryColor;
+        color: $primaryColor;
+    }
+}
