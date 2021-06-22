@@ -66,6 +66,11 @@
                 position: sticky;
             }
 
+            @include media('<tablet') {
+                background: url(img/shangai-downtown-mob.jpg) no-repeat;
+                background-size: cover;
+            }
+
             .overlay {
                 position: absolute;
                 top: 0;
